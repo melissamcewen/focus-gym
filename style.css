@@ -1,0 +1,323 @@
+/* styles */
+/* called by your view template */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+
+    font-family: 'Abril Fatface', cursive;
+
+  margin: 2em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  max-width: 600px;
+}
+
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: cyan;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 3px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+}
+
+
+
+button:active {
+  box-shadow: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+
+.button-group {
+  margin: 10px;
+}
+
+:root {
+  --color-blue: #48d9d6;
+  --color-red: #db350f;
+  --color-grey: #999999;
+  --color-yellow: #f9c33f;
+}
+
+body {
+  color: var(--color-blue);
+}
+
+main {
+  border: var(--color-blue) 10px solid;
+  border-radius: 25px;
+  padding: 25px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.hidden {
+transform: scaleY(0);
+}
+
+#goal {
+  transition: all 1.2s linear;
+}
+
+.section {
+  width: 100%;
+  text-align: center;
+}
+
+.top {
+  align-self: flex-start;
+}
+
+.bottom {
+  align-self: flex-end;
+}
+
+button {
+  font-size: 20px;
+  color: #fff;
+  border-radius: 10px;
+  background-color: var(--color-grey);
+  border: 5px solid var(--color-grey);
+  box-shadow: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+button:hover {
+ border: 5px solid var(--color-blue);
+}
+
+button:active {
+  box-shadow: none;
+}
+
+.red {
+  color: var(--color-red);
+}
+
+.medium {
+  font-size: 1.5rem;
+}
+
+.large {
+  font-size: 2rem;
+}
+
+.three-item {
+display: flex;
+    justify-content: space-between;
+}
+
+
+
+input {
+border-color: var(--color-red);
+  border-width: 5px 10px;
+  border-style: solid;
+    border-radius: 10px;
+  font-size: 1.5rem;
+  color:  var(--color-red);
+
+
+}
+
+input:focus { 
+outline:0;
+
+}
+
+.left {
+text-align: left;
+}
+
+.switches {
+display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch {
+ flex: 0 0 30%;
+
+}
+
+.switch1 {
+  text-align: right;
+  margin-right: 20px;
+
+}
+
+
+.switch2 {
+  text-align: left;
+  margin-left: 20px;
+
+}
+.emoji-toggle {
+  flex: 1;
+
+}
+
+.button-blue {
+  border-color: var(--color-blue);
+   background-color: var(--color-blue);
+  
+  color: #fff;
+
+
+}
+
+.button-outline-blue {
+  border-color: var(--color-blue);
+   background-color: #fff;
+  
+  color: var(--color-blue);
+
+
+}
+.button-red {
+  border-color: var(--color-red);
+   background-color: var(--color-red);
+  
+  color: #fff;
+
+
+}
+
+
+
+.button-outline-red {
+ color: var(--color-red);
+  background-color: #fff;
+  
+  border-color: var(--color-red);
+
+}
+
+.button-yellow {
+  border-color: var(--color-yellow);
+   background-color: var(--color-yellow);
+  
+  color: #fff;
+
+
+}
+
+
+.button-group button {
+  margin: 5px;
+
+}
+
+/* https://codepen.io/chriscoyier/pen/EVamGp*/
+
+.emoji-toggle {
+  position: relative;
+  width: 130px;
+  margin: 40px auto;
+}
+.emoji-toggle .well {
+  display: block;
+  background: #eee;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.emoji-toggle .toggle {
+  opacity: 0;
+  border: 0;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+}
+.emoji-toggle .toggle ~ .emoji:before {
+ content: " ";
+  background-image: url("https://cdn.glitch.com/8d673461-94a0-4fc0-99fd-ff85ede7b603%2Fball.svg");
+  background-repeat: no-repeat;
+  background-size:60px;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  font-size: 40px;
+  transition: 1.2s;
+  
+}
+
+
+.emoji-toggle .toggle:checked ~ .emoji:before {
+  left: 100%;
+  margin-left: -1em;
+}
+.emoji-toggle .toggle ~ label {
+  white-space: nowrap;
+}
+.emoji-toggle .toggle ~ label:before {
+  position: absolute;
+  right: 100%;
+  margin-right: 5px;
+  top: 0;
+}
+.emoji-toggle .toggle ~ label:after {
+  position: absolute;
+  left: 100%;
+  margin-left: 5px;
+  top: 0;
+}
+
+
+
+.emoji-happy .toggle ~ .emoji:before {
+}
+.emoji-happy .toggle:checked ~ .emoji:before {
+  background-image: url("https://cdn.glitch.com/8d673461-94a0-4fc0-99fd-ff85ede7b603%2Fblueball.svg")
+}

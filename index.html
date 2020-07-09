@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+  </head>
+  <body>
+    <main>
+      <div class="section top">
+        <h1>
+          Focus Gym
+        </h1>
+        <h2 id="status" class="red">
+          doing nothing
+        </h2>
+      </div>
+      <div class="section middle">
+        <div id="startButtons" class="button-group">
+          <input id="goal" type="text" maxlength="100" placeholder="What will you focus on?" />
+          <div class="switches">
+            <div class="red medium right switch switch1">Focus</div>
+            <div class="emoji-toggle emoji-happy">
+              <input type="checkbox" id="toggle1" class="toggle" />
+              <div class="emoji"></div>
+              <label for="toggle1" class="well"></label>
+            </div>
+            <div class="blue medium left switch switch2">Break</div>
+          </div>
+          <button id="trainButton" class="button-outline-red ">Train!</button>
+          <button id="breakButton" class="button-outline-blue ">Break</button>
+        </div>
+
+        <div id="clock" class="display large">
+          <h1 class="display__time-left"></h1>
+          <p class="display__end-time"></p>
+        </div>
+
+        <div class="messages">
+          <div id="status-message">
+            
+          </div>
+          
+        <div id="hyperfocus" class="reminder">
+          DANGER HYPERFOCUS PLZ Break now!
+        </div>
+
+        <div id="slackmode" class="reminder">
+          Uh looks like that's a lot of breaks. How about trying a short focus or reduce breaking time?
+        </div>
+
+        <div id="levelup" class="reminder">
+          you've leveled up! Let's try increasing your focus time a bit and seeing what happens.
+        </div>
+        </div>
+
+        <div id="goalQuiz" class="button-group">
+          <div id="goalQuestion"></div>
+          <button id="yesGoal" class="button-blue">Yes</button>
+          <button id="noGoal" class="button-yellow">No</button>
+        </div>
+
+        <div id="feelingsQuiz" class="button-group">
+          <div id="quizQuestion"></div>
+          <button id="tooLong" class="button-red">Too long</button>
+          <button id="justRight" class="button-blue">Just Right!</button>
+          <button id="tooShort" class="button-yellow">Too short</button>
+        </div>
+
+        <img src="https://cdn.glitch.com/8d673461-94a0-4fc0-99fd-ff85ede7b603%2Fseal.svg?1553642937111" />
+      </div>
+      <div class="section bottom">
+        <div class="three-item">
+          <div class="sessions medium">
+            <img src="https://cdn.glitch.com/8d673461-94a0-4fc0-99fd-ff85ede7b603%2Fticket.svg">
+            <span id="sessionsTotal">8/10</span>
+          </div>
+          <div id="endButtons" class="button-group">
+            <button id="endEarly">End now</button>
+          </div>
+          <div class="improvement medium red">
+            <img src="https://cdn.glitch.com/8d673461-94a0-4fc0-99fd-ff85ede7b603%2Fcrown.svg">
+              <span id="timeTotal">2:00</span>
+          </div>
+        </div>
+
+        <div id="debugging" class="button-group">
+          <button id="newDay">New Day</button>
+
+          <button id="reset">Reset</button>
+          <button id="fake">Fake</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
